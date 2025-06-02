@@ -119,9 +119,21 @@ Pipeline ini menggunakan dua worker Celery yang berbeda untuk memisahkan task pr
 | `--loglevel=info`     | Menampilkan log dengan level info.                                                         |
 | `-P solo`             | Menjalankan worker dengan pool proses tunggal (sesuai kebutuhan).                           |
 
----
-
-### 2. Menjalankan Pipeline ETL dengan Task Chain di Producer
+### 2. Mejalankan Monitoring flower
+```bash
+celery -A tasks flower --port=5555
+```
+| Opsi                  | Keterangan                                                                                  |
+|-----------------------|---------------------------------------------------------------------------------------------|
+|-A tasks	            |Menunjukkan modul Celery yang digunakan (tasks.py).                                          |
+|flower	               |Perintah untuk menjalankan Flower.                                                           |
+|--port=5555            |Menentukan port web server Flower (default 5555).                                            |
+🌐 Mengakses Dashboard Flower
+Buka browser dan akses alamat berikut untuk melihat dashboard Flower:
+```
+http://localhost:5555
+```
+### 3. Menjalankan Pipeline ETL dengan Task Chain di Producer
 
 Task chain dieksekusi di `producer.py` untuk menjalankan task preprocessing dan feature engineering secara berurutan.
 
