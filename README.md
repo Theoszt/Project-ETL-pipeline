@@ -33,7 +33,7 @@ Data yang digunakan adalah data penjualan cafe yang masih "kotor" (dirty data) d
 | `feature_engineering.py` | Modul Celery task untuk melakukan feature engineering pada data yang sudah diproses.              |
 | `producer.py`            | Mendefinisikan pipeline ETL dengan Celery, mengatur task dan mengeksekusi task mengunakan chain.  |
 | `task.py`                | Konfigurasi Celery task queue, termasuk exchange, queue, dan routing key untuk pipeline dan utilitas untuk preprocessing dan feature engineering yang digunakan oleh task-task lain.|
-| `__init__.py`            | File inisialisasi proyek (kosong atau berisi konfigurasi dasar).                                  |
+| `requirements.txt`            |  file teks yang berisi daftar semua paket (library) Python beserta versinya yang dibutuhkan oleh sebuah project ini|
 
 ---
 
@@ -128,6 +128,7 @@ celery -A tasks flower --port=5555
 |-A tasks	            |Menunjukkan modul Celery yang digunakan (tasks.py).                                          |
 |flower	               |Perintah untuk menjalankan Flower.                                                           |
 |--port=5555            |Menentukan port web server Flower (default 5555).                                            |
+
 🌐 Mengakses Dashboard Flower
 Buka browser dan akses alamat berikut untuk melihat dashboard Flower:
 ```
