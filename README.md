@@ -31,10 +31,8 @@ Data yang digunakan adalah data penjualan cafe yang masih "kotor" (dirty data) d
 | `dirty_cafe_sales.csv`   | Dataset penjualan cafe yang berisi data mentah yang perlu diproses.                               |
 | `pre_processing.py`      | Modul Celery task untuk preprocessing data, termasuk pembersihan dan transformasi awal.           |
 | `feature_engineering.py` | Modul Celery task untuk melakukan feature engineering pada data yang sudah diproses.              |
-| `task_chain.py`          | Mendefinisikan workflow Celery menggunakan fungsi `chain` untuk menghubungkan task secara berurutan. |
-| `producer.py`            | Mendefinisikan pipeline ETL dengan Celery, mengatur task dan mengeksekusi task chain.             |
-| `task.py`                | Konfigurasi Celery task queue, termasuk exchange, queue, dan routing key untuk pipeline.          |
-| `utils.py`               | Fungsi utilitas untuk preprocessing dan feature engineering yang digunakan oleh task-task lain.  |
+| `producer.py`            | Mendefinisikan pipeline ETL dengan Celery, mengatur task dan mengeksekusi task mengunakan chain.  |
+| `task.py`                | Konfigurasi Celery task queue, termasuk exchange, queue, dan routing key untuk pipeline dan utilitas untuk preprocessing dan feature engineering yang digunakan oleh task-task lain.|
 | `__init__.py`            | File inisialisasi proyek (kosong atau berisi konfigurasi dasar).                                  |
 
 ---
